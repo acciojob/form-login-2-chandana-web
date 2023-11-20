@@ -1,6 +1,5 @@
 const c=document.querySelector(".info");
-     c.addEventListener("submit", function(e){
-		e.preventDefault();
+     c.submit(){
 		var fname=document.getElementById("fname").value;
 		var lname=document.getElementById("lname").value;
 		var phone=document.getElementById("phone").value;
