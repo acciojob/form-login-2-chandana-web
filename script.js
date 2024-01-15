@@ -5,10 +5,10 @@ form.addEventListener("submit", (event) => {
 
     // Get form information
     const formData = new FormData(form);
-    let formInfo = "Form Information:\n";
+    let formInfo = "";
 
     for (const [key, value] of formData.entries()) {
-        formInfo += `${key}: ${value}\n`;
+        formInfo+=`${key}: ${value}\n`;
     }
 
     // Display alert with form information
