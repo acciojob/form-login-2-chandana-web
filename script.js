@@ -1,8 +1,16 @@
-const c=document.querySelector(".info");
-     c.submit(){
-		var fname=document.getElementById("fname").value;
-		var lname=document.getElementById("lname").value;
-		var phone=document.getElementById("phone").value;
-		var email=document.getElementById("email").value;
-		alert('First Name: ' + fname + '\nLast Name: ' + lname + '\nPhone Number: ' + phone + '\nEmail ID: ' + email);
-	});
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevents the default form submission behavior
+
+    // Get form information
+    const formData = new FormData(form);
+    let formInfo = "Form Information:\n";
+
+    for (const [key, value] of formData.entries()) {
+        formInfo += `${key}: ${value}\n`;
+    }
+
+    // Display alert with form information
+    alert(formInfo);
+});
